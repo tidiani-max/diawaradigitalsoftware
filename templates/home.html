@@ -1,0 +1,205 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Diawara Digital & Software</title>
+  <link rel="icon" type="image/png" href="{% static 'images/logo.png' %}" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Roboto', sans-serif; margin: 0; padding: 0; }
+    .whatsapp-btn {
+      position: fixed;
+      right: 20px;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: #25D366;
+      color: white;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      font-size: 30px;
+      cursor: pointer;
+      z-index: 1000;
+    }
+    @keyframes bgSlide {
+      0% { background-image: url('https://images.unsplash.com/photo-1531297484001-80022131f5a1'); }
+      33% { background-image: url('https://www.shutterstock.com/image-photo/portrait-african-american-developer-using-600nw-2108122673.jpg'); }
+      66% { background-image: url('https://images.unsplash.com/photo-1498050108023-c5249f4df085'); }
+      100% { background-image: url('https://images.unsplash.com/photo-1531297484001-80022131f5a1'); }
+    }
+    .animate-bgSlide {
+      animation: bgSlide 12s infinite linear;
+      background-size: cover;
+      background-position: center;
+    }
+  </style> 
+</head>
+<body class="bg-black text-white">
+
+  <!-- Navbar -->
+  <nav class="fixed top-0 left-0 w-full bg-white text-blue-600 shadow-md z-50">
+    <div class="max-w-screen-xl mx-auto px-6 py-4 flex items-center justify-between">
+      <a href="#home" class="flex items-center space-x-2 text-2xl font-extrabold bg-gradient-to-r from-blue-500 to-green-400 bg-clip-text text-transparent tracking-wide hover:opacity-90 transition duration-300">
+    <i class="fas fa-microchip"></i>
+    <span>DDS | Diawara Digital</span>
+</a>
+
+      <div class="hidden md:flex space-x-6">
+        <a href="#home" class="hover:text-blue-600">Accueil</a>
+        <a href="#services" class="hover:text-blue-600">Services</a>
+        <a href="#portfolio" class="hover:text-blue-600">Portefolio</a>
+        <a href="#about" class="hover:text-blue-600">A Propos</a>
+        <a href="#contact" class="hover:text-blue-600">Contact</a>
+      </div>
+      <button id="menu-btn" class="md:hidden text-gray-600">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      </button>
+    </div>
+    <div id="mobile-menu" class="hidden md:hidden px-6 py-4 space-y-2">
+      <a href="#home" class="block">Accueil</a>
+      <a href="#services" class="block">Services</a>
+      <a href="#portfolio" class="block">Portefolio</a>
+      <a href="#about" class="block">A Propos</a>
+      <a href="#contact" class="block">Contact</a>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section id="home" class="relative pt-28 pb-20 text-white text-center">
+    <div class="absolute inset-0 animate-bgSlide"></div>
+    <div class="absolute inset-0 bg-black bg-opacity-60"></div>
+    <div class="relative max-w-screen-xl mx-auto px-6">
+      <h1 class="text-4xl md:text-6xl font-bold">Bienvenue chez Diawara Digital & Software</h1>
+      <p class="mt-4 text-xl md:text-2xl">Des solutions Web, mobiles et IA pour faire briller votre entreprise.</p>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section id="services" class="py-20 bg-black text-center">
+    <div class="max-w-screen-xl mx-auto px-6">
+      <h2 class="text-3xl font-bold mb-12">Nos Services</h2>
+      <div class="grid gap-8 grid-cols-2 md:grid-cols-3">
+        <!-- Repeat for each service -->
+        <div class="bg-white p-6 rounded shadow">
+          <img src="https://storage.googleapis.com/a1aa/image/0zVqW-ThDsg7QI0RONEDnWSNFSd-GoLLzshALMk-jYw.jpg" class="mx-auto mb-4" width="100" height="100" alt="Web Dev">
+          <h3 class="text-xl font-bold mb-2">Développement Web</h3>
+          <p class="text-gray-600">Sites dynamiques et performants adaptés à votre business.</p>
+        </div>
+        <!-- ... more services ... -->
+        <div class="bg-white p-6 rounded-lg shadow-lg">
+            <img alt="Icon representing mobile app development services" class="mx-auto mb-4" height="100" src="https://storage.googleapis.com/a1aa/image/q-WusBk31TNgGdLLsIrSwr2_9TRv2iOTK0-vxqwc_bs.jpg" width="100"/>
+            <h3 class="text-2xl font-bold mb-2">
+            Développement d'applications mobiles
+            </h3>
+            <p class="text-gray-600">
+            Notre équipe crée des applications mobiles conviviales pour les plateformes iOS et Android.
+            </p>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow-lg">
+            <img alt="Icon representing UI/UX design services" class="mx-auto mb-4" height="100" src="https://storage.googleapis.com/a1aa/image/X9gRf0tcopupen7LxPmwwvWsWrTIDemekNALgaAIFdk.jpg" width="100"/>
+            <h3 class="text-2xl font-bold mb-2">
+            UI/UX Design
+            </h3>
+            <p class="text-gray-600">
+            Nous concevons des interfaces utilisateur intuitives et attrayantes pour améliorer l'expérience utilisateur.
+            </p>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow-lg">
+            <img alt="Icon representing AI services" class="mx-auto mb-4" height="100" src="{% static 'images/ai.jfif' %}" width="100"/>
+            <h3 class="text-2xl font-bold mb-2">
+            Intelligence Artificielle
+            </h3>
+            <p class="text-gray-600">
+            Nous développons des solutions d'IA avancées pour automatiser et optimiser vos processus métiers.
+            </p>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow-lg">
+            <img alt="Icon representing cybersecurity services" class="mx-auto mb-4" height="100" src="{% static 'images/cybersecurity.jfif' %}" width="100"/>
+            <h3 class="text-2xl font-bold mb-2">
+            Cybersécurité
+            </h3>
+            <p class="text-gray-600">
+            Nous protégeons vos systèmes et données contre les cybermenaces avec des solutions de sécurité avancées.
+            </p>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow-lg">
+            <img alt="Icon representing advanced web and app solutions" class="mx-auto mb-4" height="100" src="{% static 'images/web.jfif' %}" width="100"/>
+            <h3 class="text-2xl font-bold mb-2">
+            Solutions Web & Applications
+            </h3>
+            <p class="text-gray-600">
+            Nous concevons des solutions numériques sur mesure pour répondre aux défis uniques de votre entreprise.
+            </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="py-20 text-center">
+    <div class="max-w-screen-xl mx-auto px-6">
+      <h2 class="text-3xl font-bold mb-12">A Propos De Nous</h2>
+      <div class="md:flex md:items-center md:gap-10">
+        <div class="grid grid-cols-2 gap-4 md:w-1/2">
+          <img src="{% static 'images/boss2.jpg' %}" class="w-full rounded shadow" alt="Team">
+          <img src="{% static 'images/about.jfif' %}" class="w-full rounded shadow" alt="Team">
+          <img src="{% static 'images/about3.jfif' %}" class="w-full rounded shadow" alt="Team">
+          <img src="{% static 'images/about2.jfif' %}" class="w-full rounded shadow" alt="Team">
+        </div>
+        <div class="md:w-1/2 text-left mt-6 md:mt-0">
+          <p class="text-white mb-4"> Diawara Digital & Software  est une agence de développement web de premier plan, passionnée par la création de solutions numériques innovantes. Notre équipe de développeurs, de designers et de stratèges expérimentés collabore pour réaliser des projets de haute qualité qui dépassent les attentes de nos clients..</p>
+          <p class="text-white">Nous combinons expertise technique et vision stratégique pour transformer vos idées en produits concrets.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="py-20 bg-blue-600 text-white">
+    <div class="max-w-screen-xl mx-auto px-6 text-center">
+      <h2 class="text-3xl font-bold mb-8">Contactez-nous</h2>
+      <form method="POST" id="contact-form" class="max-w-lg mx-auto">
+        {% csrf_token %}
+        <input type="text" name="name" placeholder="Nom" required class="w-full p-3 rounded mb-4 text-gray-800">
+        <input type="email" name="email" placeholder="Email" required class="w-full p-3 rounded mb-4 text-gray-800">
+        <textarea name="message" placeholder="Message" required class="w-full p-3 rounded mb-4 text-gray-800"></textarea>
+        <button type="submit" class="bg-white text-blue-600 font-bold py-3 px-6 rounded">Envoyer</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-white py-8 text-center">
+    <img src="{% static 'images/logo.png' %}" class="mx-auto h-16 mb-4" alt="Logo">
+    <p>&copy; 2024 Diawara Digital & Software. Tous droits réservés.</p>
+    <div class="mt-4 space-x-4">
+      <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-facebook-f"></i></a>
+      <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-twitter"></i></a>
+      <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-instagram"></i></a>
+      <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-linkedin-in"></i></a>
+    </div>
+  </footer>
+
+  <!-- WhatsApp -->
+  <a href="https://wa.me/yourphonenumber" target="_blank" class="whatsapp-btn">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+
+  <script>
+    document.getElementById('menu-btn').addEventListener('click', function () {
+      document.getElementById('mobile-menu').classList.toggle('hidden');
+    });
+  </script>
+</body>
+</html>
