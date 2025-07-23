@@ -1,6 +1,6 @@
-DDS – Diawara Digital & Software 🌐💡
+DDS – Diawara Digital & Software 
 
-Diawara Digital & Software (DDS)** is a tech initiative launched by Cheick Tidiani Diawara that offers innovative services in web development, AI solutions, cybersecurity, and mobile app development. DDS is focused on empowering businesses and communities across Africa and Southeast Asia through smart, digital technologies.
+Diawara Digital & Software (DDS) is a tech initiative launched by Cheick Tidiani Diawara that offers innovative services in web development, AI solutions, cybersecurity, and mobile app development. DDS is focused on empowering businesses and communities across Africa and Southeast Asia through smart, digital technologies.
 
  Vision
 
